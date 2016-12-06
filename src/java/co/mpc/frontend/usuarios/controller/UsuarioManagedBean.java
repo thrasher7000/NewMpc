@@ -23,9 +23,9 @@ public class UsuarioManagedBean implements Serializable, IManagedBean<Usuario> {
     }
     @PostConstruct
     public void init(){
-        usuario = new Usuario();
         rol = new Rol();
         estadoUsuario = new  EstadoUsuario();
+        usuario = new Usuario();
     }
     @Override
     public Usuario getObjetoByKey(Integer id) {

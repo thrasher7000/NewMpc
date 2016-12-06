@@ -1,4 +1,4 @@
-package co.mpc.frontend.fallas.controllers;
+package co.mpc.frontend.usuarios.controller;
 
 import co.mpc.backend.persistence.model.entities.Conductor;
 import co.mpc.backend.persistence.model.facades.ConductorFacadeLocal;

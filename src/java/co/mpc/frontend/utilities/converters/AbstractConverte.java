@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package co.mpc.frontend.utilities.converters;
 
 import co.mpc.backend.persistence.model.entities.IDTO;
@@ -12,10 +8,6 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 
-/**
- *
- * @author Pablo Ramirez
- */
 public abstract class AbstractConverte implements Converter {
     protected String nameManagedBean;
     

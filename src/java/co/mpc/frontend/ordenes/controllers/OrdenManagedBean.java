@@ -10,6 +10,7 @@ import co.mpc.backend.persistence.model.entities.TipoOrden;
 import co.mpc.backend.persistence.model.facades.OrdenFacadeLocal;
 import co.mpc.frontend.controllers.IManagedBean;
 import java.io.Serializable;
+import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.inject.Named;
@@ -57,5 +58,9 @@ public class OrdenManagedBean implements Serializable, IManagedBean<Orden> {
     public void eliminarOrden(){
         ordenFL.remove(orden);
     }
-
+    
+    public List<Orden> listarOrden(){
+        return ordenFL.findAll();
+    }
+   
 }

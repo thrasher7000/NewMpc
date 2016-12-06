@@ -5,10 +5,19 @@
  */
 package co.mpc.frontend.ordenes.utilities.converters;
 
+import co.mpc.backend.persistence.model.entities.Orden;
 import co.mpc.frontend.utilities.converters.AbstractConverter;
+import javax.faces.convert.FacesConverter;
 
-
-
+/**
+ *
+ * @author Juank
+ */
+@FacesConverter(forClass = Orden.class)
 public class OrdenConverter extends AbstractConverter {
-   
+
+    public OrdenConverter() {
+        this.nameManagedBean = "ordenManagedBean";
+    }
+
 }

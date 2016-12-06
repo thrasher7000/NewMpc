@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "CambioRealizado.findAll", query = "SELECT c FROM CambioRealizado c"),
     @NamedQuery(name = "CambioRealizado.findByIdCambioRealizado", query = "SELECT c FROM CambioRealizado c WHERE c.idCambioRealizado = :idCambioRealizado"),
     @NamedQuery(name = "CambioRealizado.findByCostoComponenteUnitario", query = "SELECT c FROM CambioRealizado c WHERE c.costoComponenteUnitario = :costoComponenteUnitario")})
-public class CambioRealizado implements Serializable {
+public class CambioRealizado implements Serializable, IDTO {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -129,6 +129,11 @@ public class CambioRealizado implements Serializable {
     @Override
     public String toString() {
         return "co.mpc.backend.persistence.model.entities.CambioRealizado[ idCambioRealizado=" + idCambioRealizado + " ]";
+    }
+
+    @Override
+    public String getPrimaryKey() {
+        return idCambioRealizado.toString();
     }
     
 }

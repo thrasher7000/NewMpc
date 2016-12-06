@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Orden.findByIdOrden", query = "SELECT o FROM Orden o WHERE o.idOrden = :idOrden"),
     @NamedQuery(name = "Orden.findByFechaEmision", query = "SELECT o FROM Orden o WHERE o.fechaEmision = :fechaEmision"),
     @NamedQuery(name = "Orden.findByPlazoMaximo", query = "SELECT o FROM Orden o WHERE o.plazoMaximo = :plazoMaximo")})
-public class Orden implements Serializable {
+public class Orden implements Serializable, IDTO {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -199,5 +199,10 @@ public class Orden implements Serializable {
     public String toString() {
         return "co.mpc.backend.persistence.model.entities.Orden[ idOrden=" + idOrden + " ]";
     }
-    
+
+    @Override
+    public String getPrimaryKey() {
+        return idOrden.toString();
+    }
+
 }

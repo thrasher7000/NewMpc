@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Revision.findAll", query = "SELECT r FROM Revision r"),
     @NamedQuery(name = "Revision.findByIdRevision", query = "SELECT r FROM Revision r WHERE r.idRevision = :idRevision"),
     @NamedQuery(name = "Revision.findByFechaEntrega", query = "SELECT r FROM Revision r WHERE r.fechaEntrega = :fechaEntrega")})
-public class Revision implements Serializable {
+public class Revision implements Serializable, IDTO {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -139,6 +139,11 @@ public class Revision implements Serializable {
     @Override
     public String toString() {
         return "co.mpc.backend.persistence.model.entities.Revision[ idRevision=" + idRevision + " ]";
+    }
+
+    @Override
+    public String getPrimaryKey() {
+        return idRevision.toString();
     }
     
 }

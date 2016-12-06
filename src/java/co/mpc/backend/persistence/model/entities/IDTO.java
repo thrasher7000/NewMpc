@@ -5,6 +5,6 @@
  */
 package co.mpc.backend.persistence.model.entities;
 
-public interface DTO {
+public interface IDTO {
     public String getPrimaryKey();
 }

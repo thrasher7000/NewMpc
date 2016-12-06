@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Conductor.findByIdConductor", query = "SELECT c FROM Conductor c WHERE c.idConductor = :idConductor"),
     @NamedQuery(name = "Conductor.findByNumeroLicencia", query = "SELECT c FROM Conductor c WHERE c.numeroLicencia = :numeroLicencia"),
     @NamedQuery(name = "Conductor.findByFechaVenicimientoLicencia", query = "SELECT c FROM Conductor c WHERE c.fechaVenicimientoLicencia = :fechaVenicimientoLicencia")})
-public class Conductor implements Serializable {
+public class Conductor implements Serializable , IDTO {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -165,6 +165,11 @@ public class Conductor implements Serializable {
     @Override
     public String toString() {
         return "co.mpc.backend.persistence.model.entities.Conductor[ idConductor=" + idConductor + " ]";
+    }
+
+    @Override
+    public String getPrimaryKey() {
+        return idConductor.toString();
     }
     
 }

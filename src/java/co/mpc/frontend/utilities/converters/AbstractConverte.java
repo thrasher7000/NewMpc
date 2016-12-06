@@ -5,7 +5,7 @@
  */
 package co.mpc.frontend.utilities.converters;
 
-import co.mpc.backend.persistence.model.entities.DTO;
+import co.mpc.backend.persistence.model.entities.IDTO;
 import co.mpc.frontend.controllers.IManagedBean;
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
@@ -31,9 +31,9 @@ public abstract class AbstractConverte implements Converter {
 
     @Override
     public String getAsString(FacesContext context, UIComponent component, Object value) {
-        if( value instanceof DTO){
-            DTO to = (DTO) value;
-            return to.getPrimaryKey();
+        if( value instanceof IDTO){
+            IDTO dto = (IDTO) value;
+            return dto.getPrimaryKey();
         }
         context.addMessage(null, new FacesMessage("Error al convertir el objeto TipoOrden a String"));
         return null;

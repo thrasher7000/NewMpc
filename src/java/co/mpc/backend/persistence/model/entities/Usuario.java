@@ -104,8 +104,8 @@ public class Usuario implements Serializable {
     @JoinColumn(name = "id_rol", referencedColumnName = "id_rol")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Rol idRol;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "idUsuarioConductor", fetch = FetchType.LAZY)
-    private Conductor conductor;
+    //@OneToOne(cascade = CascadeType.ALL, mappedBy = "idUsuarioConductor", fetch = FetchType.LAZY)
+    //private Conductor conductor;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUsuario", fetch = FetchType.LAZY)
     private Collection<Orden> ordenCollection;
 
@@ -223,13 +223,13 @@ public class Usuario implements Serializable {
         this.idRol = idRol;
     }
 
-    public Conductor getConductor() {
-        return conductor;
-    }
+    //public Conductor getConductor() {
+   //     return conductor;
+    //}
 
-    public void setConductor(Conductor conductor) {
-        this.conductor = conductor;
-    }
+    //public void setConductor(Conductor conductor) {
+     //   this.conductor = conductor;
+    //}
 
     @XmlTransient
     public Collection<Orden> getOrdenCollection() {

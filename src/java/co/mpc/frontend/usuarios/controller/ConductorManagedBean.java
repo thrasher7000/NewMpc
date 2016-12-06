@@ -10,10 +10,11 @@ import java.io.Serializable;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
+import co.mpc.backend.persistence.model.entities.TipoVehiculo;
 
 /**
  *
- * @author Pablo Ramirez
+ * @author Miguel Angel Rivera Niño
  */
 
 @Named(value = "conductorManagedBean")
@@ -21,6 +22,7 @@ import javax.ejb.EJB;
 public class ConductorManagedBean implements Serializable, IManagedBean<Conductor>{
 
     private Conductor conductor;
+    private TipoVehiculo tipovehiculo;
     private Usuario usuario;
     @EJB private ConductorFacadeLocal conductorFacadeLocal;
     
@@ -30,6 +32,7 @@ public class ConductorManagedBean implements Serializable, IManagedBean<Conducto
     public void init(){
         conductor = new Conductor();
         usuario = new Usuario();
+        tipovehiculo = new TipoVehiculo();
     }
     @Override
     public Conductor getObjetoByKey(Integer id) {

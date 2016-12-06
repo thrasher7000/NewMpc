@@ -3,8 +3,6 @@ package co.mpc.frontend.vehiculos.controllers;
 import co.mpc.backend.persistence.model.entities.Conductor;
 import co.mpc.backend.persistence.model.entities.TipoVehiculo;
 import co.mpc.backend.persistence.model.entities.Vehiculo;
-import co.mpc.backend.persistence.model.facades.ConductorFacadeLocal;
-import co.mpc.backend.persistence.model.facades.TipoVehiculoFacadeLocal;
 import co.mpc.backend.persistence.model.facades.VehiculoFacadeLocal;
 import co.mpc.frontend.controllers.IManagedBean;
 import java.io.Serializable;
@@ -12,7 +10,6 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.inject.Named;
-import javax.enterprise.context.Dependent;
 import javax.enterprise.context.SessionScoped;
 
 /**
@@ -20,7 +17,7 @@ import javax.enterprise.context.SessionScoped;
  * @author Brayan Mendez
  */
 
-@Named(value = "vehiculosManagedBean")
+@Named(value = "vehiculoManagedBean")
 @SessionScoped
 public class VehiculoManagedBean implements Serializable, IManagedBean<Vehiculo> {
 
@@ -30,8 +27,6 @@ public class VehiculoManagedBean implements Serializable, IManagedBean<Vehiculo>
     private TipoVehiculo tipoVehiculo;
     
     @EJB private VehiculoFacadeLocal vehiculofacadelocal;
-    @EJB private ConductorFacadeLocal conductorFacadeLocal;
-    @EJB private TipoVehiculoFacadeLocal tipoVehiculoFacadeLocal;
     
     public VehiculoManagedBean() {
     }

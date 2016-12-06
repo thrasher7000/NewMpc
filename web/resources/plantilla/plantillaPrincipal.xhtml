@@ -6,25 +6,38 @@
 
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <h:outputStylesheet name="./css/default.css"/>
-        <h:outputStylesheet name="./css/cssLayout.css"/>
-        <title>Facelets Template</title>
+        <h:outputStylesheet name="css/boostrap-dist.css" />
+        <h:outputStylesheet name="css/flexboxgrid-dist.css"/>
+        <h:outputStylesheet name="css/usuarios-dist.css"/>
+        <h:outputStylesheet name="css/dataTables-bootstrap-dist.css"/>
+        <h:outputStylesheet name="css/core-dist.css" />
+        <h:outputStylesheet name="css/botones-tablas.css"/>
+        <h:outputStylesheet name="css/jquery-confirm-dist.css"/>
+        <h:outputStylesheet name="css/formValidation-dist.css"/>
+        <h:outputStylesheet name="css/bootstrap-select.min.css"/>
+        <h:outputStylesheet name="css/iconos-mpc.css"/>
+        <h:outputStylesheet name="css/amaran-min.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="#{resource['img/favicon.png']}"/>
+        <title>Sistema mpc</title>
     </h:head>
 
     <h:body>
 
-        <div id="top">
-            <ui:insert name="top">Top</ui:insert>
-        </div>
+        <head>
+            <ui:insert name="head">Top</ui:insert>
+        </head>
 
-        <div id="content" class="center_content">
-            <ui:insert name="content">Content</ui:insert>
-        </div>
+        <aside>
+            <ui:insert name="aside">Content</ui:insert>
+        </aside>
 
-        <div id="bottom">
-            <ui:insert name="bottom">Bottom</ui:insert>
-        </div>
-
+        <main>
+            <ui:insert name="main">Bottom</ui:insert>
+        </main>
+        
+        <h:outputScript name="js/jquery-dist.js"/>
+        <h:outputScript name="js/boostrap-dist.js"/>
+        <h:outputScript name="js/core-dist.js"/>
     </h:body>
 
 </html>

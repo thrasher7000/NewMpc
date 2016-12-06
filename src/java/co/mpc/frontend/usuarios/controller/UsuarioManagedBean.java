@@ -62,7 +62,7 @@ public class UsuarioManagedBean implements Serializable, IManagedBean<Usuario> {
     public void eliminarUsuario(Usuario u){
         usuarioFacadeLocal.remove(u);
     }
-    public List<Usuario> ListarUsuario(){
+    public List<Usuario> listarUsuario(){
         return usuarioFacadeLocal.findAll();
     }
     public void editarUsuario(){

@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "TipoDocumento.findAll", query = "SELECT t FROM TipoDocumento t"),
     @NamedQuery(name = "TipoDocumento.findByIdTipoDocumento", query = "SELECT t FROM TipoDocumento t WHERE t.idTipoDocumento = :idTipoDocumento"),
     @NamedQuery(name = "TipoDocumento.findByNombreTipoDocumento", query = "SELECT t FROM TipoDocumento t WHERE t.nombreTipoDocumento = :nombreTipoDocumento")})
-public class TipoDocumento implements Serializable {
+public class TipoDocumento implements Serializable, IDTO{
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -125,6 +125,11 @@ public class TipoDocumento implements Serializable {
     @Override
     public String toString() {
         return "co.mpc.backend.persistence.model.entities.TipoDocumento[ idTipoDocumento=" + idTipoDocumento + " ]";
+    }
+
+    @Override
+    public String getPrimaryKey() {
+        return idTipoDocumento.toString();
     }
     
 }

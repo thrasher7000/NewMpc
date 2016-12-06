@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "DocumentoVehiculo.findByNombreDocumento", query = "SELECT d FROM DocumentoVehiculo d WHERE d.nombreDocumento = :nombreDocumento"),
     @NamedQuery(name = "DocumentoVehiculo.findByFechaAdquisicion", query = "SELECT d FROM DocumentoVehiculo d WHERE d.fechaAdquisicion = :fechaAdquisicion"),
     @NamedQuery(name = "DocumentoVehiculo.findByFechaVencimiento", query = "SELECT d FROM DocumentoVehiculo d WHERE d.fechaVencimiento = :fechaVencimiento")})
-public class DocumentoVehiculo implements Serializable {
+public class DocumentoVehiculo implements Serializable, IDTO {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -179,6 +179,11 @@ public class DocumentoVehiculo implements Serializable {
     @Override
     public String toString() {
         return "co.mpc.backend.persistence.model.entities.DocumentoVehiculo[ idDocumentoVehiculo=" + idDocumentoVehiculo + " ]";
+    }
+
+    @Override
+    public String getPrimaryKey() {
+        return idDocumentoVehiculo.toString();
     }
     
 }

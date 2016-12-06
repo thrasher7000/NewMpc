@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "FallaVehiculo.findAll", query = "SELECT f FROM FallaVehiculo f"),
     @NamedQuery(name = "FallaVehiculo.findByIdFallaVehiculo", query = "SELECT f FROM FallaVehiculo f WHERE f.idFallaVehiculo = :idFallaVehiculo")})
-public class FallaVehiculo implements Serializable {
+public class FallaVehiculo implements Serializable, IDTO{
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -134,4 +134,8 @@ public class FallaVehiculo implements Serializable {
         return "co.mpc.backend.persistence.model.entities.FallaVehiculo[ idFallaVehiculo=" + idFallaVehiculo + " ]";
     }
     
+    @Override
+    public String getPrimaryKey(){
+        return idFallaVehiculo.toString();
+    }
 }

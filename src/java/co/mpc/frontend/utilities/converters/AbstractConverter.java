@@ -8,7 +8,7 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 
-public abstract class AbstractConverte implements Converter {
+public abstract class AbstractConverter implements Converter {
     protected String nameManagedBean;
     
     @Override

@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "sistema-mpc";
+  src:url("../fonts/sistema-mpc.eot");
+  src:url("../fonts/sistema-mpc.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/sistema-mpc.woff") format("woff"),
+    url("../fonts/sistema-mpc.ttf") format("truetype"),
+    url("../fonts/sistema-mpc.svg#sistema-mpc") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "sistema-mpc" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="mpc-"]:before,
+[class*=" mpc-"]:before {
+  font-family: "sistema-mpc" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mpc-user:before {
+  content: "\e000";
+}
+.mpc-menu:before {
+  content: "\e001";
+}
+.mpc-down-mini:before {
+  content: "\e002";
+}
+.mpc-bell:before {
+  content: "\e003";
+}
+.mpc-mail:before {
+  content: "\e004";
+}
+.mpc-plus:before {
+  content: "\e005";
+}
+.mpc-book:before {
+  content: "\e006";
+}
+.mpc-chart-bar:before {
+  content: "\e007";
+}
+.mpc-clipboard:before {
+  content: "\e008";
+}
+.mpc-home:before {
+  content: "\e009";
+}
+.mpc-user-add:before {
+  content: "\e00a";
+}
+.mpc-users:before {
+  content: "\e00b";
+}
+.mpc-upload:before {
+  content: "\e00c";
+}
+.mpc-droplet:before {
+  content: "\e00d";
+}
+.mpc-book-1:before {
+  content: "\e00e";
+}
+.mpc-cogs:before {
+  content: "\e00f";
+}
+.mpc-down:before {
+  content: "\e010";
+}
+.mpc-alert:before {
+  content: "\e011";
+}
+.mpc-edit:before {
+  content: "\e012";
+}
+.mpc-question:before {
+  content: "\e013";
+}
+.mpc-info:before {
+  content: "\e014";
+}
+.mpc-key:before {
+  content: "\e015";
+}
+.mpc-phone:before {
+  content: "\e016";
+}
+.mpc-map:before {
+  content: "\e017";
+}
+.mpc-cedula:before {
+  content: "\e018";
+}
+.mpc-power-off:before {
+  content: "\e019";
+}
+.mpc-trash:before {
+  content: "\e01a";
+}
+.mpc-flag:before {
+  content: "\e01b";
+}
+.mpc-up-dir:before {
+  content: "\e01c";
+}
+.mpc-down-dir:before {
+  content: "\e01d";
+}
+.mpc-calendar:before {
+  content: "\e01e";
+}
+.mpc-refresh:before {
+  content: "\e01f";
+}
+.mpc-list-alt:before {
+  content: "\e020";
+}
+.mpc-check:before {
+  content: "\e021";
+}
+.mpc-arrow-left:before {
+  content: "\e022";
+}
+.mpc-clip:before {
+  content: "\e023";
+}
+.mpc-car:before {
+  content: "\e025";
+}
+.mpc-tags:before {
+  content: "\e026";
+}
+.mpc-wrench:before {
+  content: "\e027";
+}
+.mpc-file-text:before {
+  content: "\e028";
+}
+.mpc-minus:before {
+  content: "\e029";
+}
+.mpc-print:before {
+  content: "\e02a";
+}
+.mpc-download:before {
+  content: "\e02b";
+}
+.mpc-folder:before {
+  content: "\e02c";
+}
+.mpc-fechas:before {
+  content: "\e02d";
+}
+.mpc-eye:before {
+  content: "\e024";
+}
+.mpc-close:before {
+  content: "\e02e";
+}

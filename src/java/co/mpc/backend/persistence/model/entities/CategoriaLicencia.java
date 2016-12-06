@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "CategoriaLicencia.findAll", query = "SELECT c FROM CategoriaLicencia c"),
     @NamedQuery(name = "CategoriaLicencia.findByIdCategoriaLicencia", query = "SELECT c FROM CategoriaLicencia c WHERE c.idCategoriaLicencia = :idCategoriaLicencia"),
     @NamedQuery(name = "CategoriaLicencia.findByNombreCategoria", query = "SELECT c FROM CategoriaLicencia c WHERE c.nombreCategoria = :nombreCategoria")})
-public class CategoriaLicencia implements Serializable {
+public class CategoriaLicencia implements Serializable, IDTO{
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -140,6 +140,11 @@ public class CategoriaLicencia implements Serializable {
     @Override
     public String toString() {
         return "co.mpc.backend.persistence.model.entities.CategoriaLicencia[ idCategoriaLicencia=" + idCategoriaLicencia + " ]";
+    }
+    
+    @Override
+    public String getPrimaryKey(){
+        return idCategoriaLicencia.toString();
     }
     
 }

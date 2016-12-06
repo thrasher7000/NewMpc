@@ -5,10 +5,10 @@
  */
 package co.mpc.frontend.ordenes.utilities.converters;
 
-import co.mpc.frontend.utilities.converters.AbstractConverte;
+import co.mpc.frontend.utilities.converters.AbstractConverter;
 
 
 
-public class OrdenConverter extends AbstractConverte {
+public class OrdenConverter extends AbstractConverter {
    
 }

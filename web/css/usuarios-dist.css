@@ -1,0 +1,21 @@
+.informacion-perfil{display:flex;text-align:center;flex-flow:column;box-shadow:0 1px rgba(0,0,0,.2)}
+.img-perfil {
+    border-radius:10px;
+    width:200px;
+    max-width:200px;
+    height:200px;
+    max-height:200px;
+    margin:0 auto;background-image: url(../img/usuarios/x250/10m.jpg);
+    background-size:cover;
+    box-shadow:0 0 0 5px #efedff;
+}
+.superPerfil {
+    background-image: url(../img/usuarios/x80/harvey.jpg);
+    background-size:cover;
+    box-shadow:0 0 0 5px #efedff;
+}
+@media only screen and (min-width:1000px){
+    .informacion-perfil{text-align:left;box-shadow:none}
+    .img-perfil{margin:0}
+}
+.actualizacion-perfil form{background:#fff;border-radius:4px;border:1px solid #ddd;padding:20px}form input:disabled{box-shadow:none!important;background:#ccc!important}.table>tbody>tr>td{vertical-align:middle}table tr td:first-child{display:flex;align-items:center}table .perfil-tabla{display:inline-block;width:40px;margin-right:10px;border-radius:4px;border:2px solid #aaa;background-size:cover}table .perfil-tabla img{width:100%}

@@ -1,0 +1,2 @@
+!function(e){e.passGen=function(a){a=e.extend({},e.passGen.options,a);var n,o,r="",i="";n={numeric:"0123456789",lowercase:"abcdefghijklmnopqrstuvwxyz",uppercase:"ABCDEFGHIJKLMNOPQRSTUVWXYZ",special:"~!@#$%^&*()-+[]{}<>?"},e.each(n,function(e,n){a[e]&&(r+=n)});for(var s=0;s<a.length;s++)o=Math.floor(Math.random()*r.length),i+=r[o];return i},e.passGen.options={length:7,numeric:!0,lowercase:!0,uppercase:!1,special:!1}}(jQuery),$(".mover-aside").click(function(){$("aside").toggleClass("aside, aside-toggle"),$("main").toggleClass("main, main-toggle")})
+

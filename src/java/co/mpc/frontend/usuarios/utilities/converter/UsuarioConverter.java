@@ -1,7 +1,7 @@
 package co.mpc.frontend.usuarios.utilities.converter;
 
-import co.mpc.frontend.utilities.converters.AbstractConverte;
+import co.mpc.frontend.utilities.converters.AbstractConverter;
 
-public class UsuarioConverter extends AbstractConverte {
+public class UsuarioConverter extends AbstractConverter {
     
 }

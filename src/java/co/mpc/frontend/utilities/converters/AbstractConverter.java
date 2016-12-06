@@ -16,8 +16,7 @@ public abstract class AbstractConverter implements Converter {
         Integer k = Integer.valueOf(value);
         //OrdenManagedBean omb = context.getApplication().evaluateExpressionGet(context, "#{ordenManagedBean}", OrdenManagedBean.class);
         IManagedBean omb = (IManagedBean) context.getApplication().getELResolver().getValue(
-                context.getELContext(), null, nameManagedBean);
-        
+                context.getELContext(), null, nameManagedBean);       
         return omb.getObjetoByKey(k);
     }
 
@@ -30,6 +29,4 @@ public abstract class AbstractConverter implements Converter {
         context.addMessage(null, new FacesMessage("Error al convertir el objeto TipoOrden a String"));
         return null;
     }
-    
 }
-

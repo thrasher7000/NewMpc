@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../../resources/plantilla/plantillaPrincipal.xhtml">
+
+            <ui:define name="main">
+                
+                <f:view>
+
+
+                    <h:form>
+                        <h1><h:outputText value="Registrate"/></h1>
+                        <h:panelGrid columns="2">
+                            <h:outputLabel value="Numero de Cedula:" for="numeroCedula" />
+                            <h:inputText id="numeroCedula" value="#{ordenManagedBean.usuario.numeroCedula}" title="NumeroCedula" required="true" requiredMessage="The NumeroCedula field is required."/>
+                            <h:outputLabel value="Clave:" for="clave" />
+                            <h:inputText id="clave" value="#{ordenManagedBean.usuario.clave}" title="Clave" required="true" requiredMessage="The Clave field is required."/>
+                            <h:outputLabel value="Nombres:" for="nombres" />
+                            <h:inputText id="nombres" value="#{ordenManagedBean.usuario.nombres}" title="Nombres" required="true" requiredMessage="The Nombres field is required."/>
+                            <h:outputLabel value="Apellidos:" for="apellidos" />
+                            <h:inputText id="apellidos" value="#{ordenManagedBean.usuario.apellidos}" title="Apellidos" required="true" requiredMessage="The Apellidos field is required."/>
+                            <h:outputLabel value="Teléfono:" for="telefono" />
+                            <h:inputText id="telefono" value="#{ordenManagedBean.usuario.telefono}" title="Telefono" />
+                            <h:outputLabel value="Telefono Celular:" for="telefonoCelular" />
+                            <h:inputText id="telefonoCelular" value="#{ordenManagedBean.usuario.telefonoCelular}" title="TelefonoCelular" required="true" requiredMessage="The TelefonoCelular field is required."/>
+                            <h:outputLabel value="Fecha de Nacimiento:" for="fechaNacimiento" />
+                            <h:inputText  id="fechaNacimiento" value="#{ordenManagedBean.usuario.fechaNacimiento}" title="FechaNacimiento" required="true" requiredMessage="The FechaNacimiento field is required.">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:inputText>
+                            <h:outputLabel value="Correo Electronico:" for="correoElectronico" />
+                            <h:inputText id="correoElectronico" value="#{ordenManagedBean.usuario.correoElectronico}" title="CorreoElectronico" required="true" requiredMessage="The CorreoElectronico field is required."/>
+                            <h:outputLabel value="Id Estado Usuario:" for="idEstadoUsuario" />
+                            <h:selectOneMenu id="idEstadoUsuario" value="#{ordenManagedBean.usuario.idEstadoUsuario}" title="IdEstadoUsuario" required="true" requiredMessage="The IdEstadoUsuario field is required.">
+                                <!-- TODO: update below reference to list of available items-->
+                                <f:selectItems value="#{estadoUsuarioManagedBean.listarEstadoUsuario()}" var="es"  itemValue="#{es.idEstadoUsuario}" itemLabel="#{es.nombreEstadoUsuario}"/>
+                            </h:selectOneMenu>
+                            <h:outputLabel value="Id Rol:" for="idRol" />
+                            <h:selectOneMenu id="idRol" value="#{ordenManagedBean.usuario.idRol}" title="IdRol" required="true" requiredMessage="The IdRol field is required.">
+                                <!-- TODO: update below reference to list of available items-->
+                                <f:selectItems value="#{rolManagedBean.listarRoles()}" var="ra" itemValue="#{ra.idRol}" itemLabel="#{ra.nombreRol}"/>
+                            </h:selectOneMenu>
+                            <h:commandButton value="Registrar" actionListener="#{usuarioManagedBean.registrarUsuario()}"/>
+                        </h:panelGrid>
+                    </h:form>
+                </f:view>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

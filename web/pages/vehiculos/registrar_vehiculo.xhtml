@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../../resources/plantilla/plantillaPrincipal.xhtml">
+
+            <ui:define name="main">
+                <f:view>
+
+
+                    <h:form>
+                        <h1><h:outputText value="Registrar Vehiculo"/></h1>
+                        <h:panelGrid columns="2">
+                          
+                            <h:outputLabel value="Matricula:" for="matricula" />
+                            <h:inputText id="matricula" value="#{documentoVehiculosManagedBean.vehiculo.matricula}" title="Matricula" required="true" requiredMessage="The Matricula field is required."/>
+                            <h:outputLabel value="NumeroChasis:" for="numeroChasis" />
+                            <h:inputText id="numeroChasis" value="#{documentoVehiculosManagedBean.vehiculo.numeroChasis}" title="NumeroChasis" required="true" requiredMessage="The NumeroChasis field is required."/>
+                            <h:outputLabel value="Cilindraje:" for="cilindraje" />
+                            <h:inputText id="cilindraje" value="#{documentoVehiculosManagedBean.vehiculo.cilindraje}" title="Cilindraje" required="true" requiredMessage="The Cilindraje field is required."/>
+                            <h:outputLabel value="TonelajeMax:" for="tonelajeMax" />
+                            <h:inputText id="tonelajeMax" value="#{documentoVehiculosManagedBean.vehiculo.tonelajeMax}" title="TonelajeMax" required="true" requiredMessage="The TonelajeMax field is required."/>
+                            <h:outputLabel value="Kilometraje:" for="kilometraje" />
+                            <h:inputText id="kilometraje" value="#{documentoVehiculosManagedBean.vehiculo.kilometraje}" title="Kilometraje" required="true" requiredMessage="The Kilometraje field is required."/>
+                            <h:outputLabel value="Combustible:" for="combustible" />
+                            <h:inputText id="combustible" value="#{documentoVehiculosManagedBean.vehiculo.combustible}" title="Combustible" required="true" requiredMessage="The Combustible field is required."/>
+                            <h:outputLabel value="Modelo:" for="modelo" />
+                            <h:inputText id="modelo" value="#{documentoVehiculosManagedBean.vehiculo.modelo}" title="Modelo" required="true" requiredMessage="The Modelo field is required."/>
+                            <h:outputLabel value="Marca:" for="marca" />
+                            <h:inputText id="marca" value="#{documentoVehiculosManagedBean.vehiculo.marca}" title="Marca" required="true" requiredMessage="The Marca field is required."/>
+                            <h:outputLabel value="Color:" for="color" />
+                            <h:inputText id="color" value="#{documentoVehiculosManagedBean.vehiculo.color}" title="Color" required="true" requiredMessage="The Color field is required."/>
+                            <h:outputLabel value="FotoVehiculo:" for="fotoVehiculo" />
+                            <h:inputTextarea rows="4" cols="30" id="fotoVehiculo" value="#{documentoVehiculosManagedBean.vehiculo.fotoVehiculo}" title="FotoVehiculo" />
+                            <h:outputLabel value="IdConductor:" for="idConductor" />
+                            <h:selectOneMenu id="idConductor" value="#{documentoVehiculosManagedBean.vehiculo.idConductor}" title="IdConductor" required="true" requiredMessage="The IdConductor field is required.">
+                                <!-- TODO: update below reference to list of available items-->
+                                <f:selectItems value="#{fixme}"/>
+                            </h:selectOneMenu>
+                            <h:outputLabel value="IdTipoVehiculo:" for="idTipoVehiculo" />
+                            <h:selectOneMenu id="idTipoVehiculo" value="#{documentoVehiculosManagedBean.vehiculo.idTipoVehiculo}" title="IdTipoVehiculo" required="true" requiredMessage="The IdTipoVehiculo field is required.">
+                                <!-- TODO: update below reference to list of available items-->
+                                <f:selectItems value="#{fixme}"/>
+                            </h:selectOneMenu>
+                            <h:outputLabel value="PrimaryKey:" for="primaryKey" />
+                            <h:inputText id="primaryKey" value="#{documentoVehiculosManagedBean.vehiculo.primaryKey}" title="PrimaryKey" />
+                        </h:panelGrid>
+                    </h:form>
+                </f:view>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

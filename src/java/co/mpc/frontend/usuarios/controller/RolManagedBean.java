@@ -8,6 +8,7 @@ import co.mpc.backend.persistence.model.facades.RolFacadeLocal;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import co.mpc.frontend.controllers.IManagedBean;
+import java.util.List;
 
 /**
  *
@@ -37,6 +38,15 @@ public class RolManagedBean implements Serializable,IManagedBean<Rol>{
         this.rol = rol;
     }
     public void registrarRol(){
-        
+        rolFacadeLocal.create(rol);
+    }
+    public void eliminarRol(Rol r){
+         rolFacadeLocal.remove(r);
+    }
+    public List<Rol> listarRoles(){
+        return rolFacadeLocal.findAll();
+    }
+    public void editarRol(Rol r){ 
+        rolFacadeLocal.edit(rol);
     }
 }
